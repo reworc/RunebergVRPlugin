@@ -7,11 +7,11 @@ public class RunebergVRPlugin : ModuleRules
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PrivatePCHHeaderFile = "Public/RunebergVRPlugin.h";
         bEnforceIWYU = true;
-        bFasterWithoutUnity = true;
+        bUseUnity = true;
 
-        PublicIncludePaths.AddRange(new string[] { "RunebergVRPlugin/Source/Public" });
+        PublicIncludePaths.AddRange(new string[] { "RunebergVRPlugin/Source/Public", "Public" });
 				
-		PrivateIncludePaths.AddRange(new string[] {"RunebergVRPlugin/Source/Private"});
+		PrivateIncludePaths.AddRange(new string[] { "RunebergVRPlugin/Source/Private", "Private"});
 		
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "HeadMountedDisplay", "NavigationSystem"});
  
